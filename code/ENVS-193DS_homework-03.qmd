@@ -2,8 +2,9 @@
 title: "Homework 3"
 date: "2026-05-25"
 author: "Luke Simon"
-format: pdf:
-  toc: true
+format: 
+  pdf:
+    toc: true
 execute:
   message: false
   warning: false
@@ -108,4 +109,19 @@ cor.test(kelp$temp_c, kelp$kelp_elong,
 
 ## d.
 
-To evaluate the strength of the relationship between temperature and giant kelp frond elongation rate, I uses a Pearson's correlation test. I found a strong negative relationship between temperature and elongation rate (Pearson's r = -0.69, t(30) = -5.2, p < 0.001, $\alpha$ =0.05)
+To evaluate the strength of the relationship between temperature and giant kelp frond elongation rate, I used a Pearson's correlation test. I found a strong negative relationship between temperature and elongation rate (Pearson's r = -0.69, t(30) = -5.2, p < 0.001, $\alpha$ = 0.05)
+
+## e.
+
+Through a Pearson's correlation test I was able to determine that there is a clear negative relationship between ocean temperature and giant kelp elongation rate in the sample area. Essentially, this means that within the sample zone in areas with a higher sea temperature we see a distinctly lower elongation date for giant kelp fronds. This is also true in the reverse, meaning that in the areas sampled with a lower temperature the elongation rates of the kelp was seen to be higher.
+
+## f.
+
+```{r}
+
+# running correlation test
+cor.test(kelp$temp_c, kelp$kelp_elong,
+         method = "spearman", exact = FALSE) # spearman's rank test
+```
+
+If I had used a Spearman's rank correlation test initially, as opposed to the Pearson's correlation I had chosen, I would have been led to the same decision in regards to the relationship of the two variables and I would have interpreted the results the same. This makes sense as a Spearman test has the same requirements for use as the Pearson but the Pearson is a parametric test, essentially, because we can use a Pearson's test we can also use a Spearman but the Pearson's will provide more information in the test that can be useful.
