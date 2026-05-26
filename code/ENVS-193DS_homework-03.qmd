@@ -29,3 +29,27 @@ kelp <- read_csv(
 ## a.
 
 There are two appropriate tests for testing the strength of the relationship between temperature and giant kelp frond elongation rate (correlation). These two are the Pearson's correlation, which assumes normally distributed continuous data, and Spearman's rank correlation, which does not require normality but does require continuous data. Pearsons'scorrelation is the correct test to choose when there are no outliers in the data and the distribution is clearly normal, in all other cases Spearman's is more appropriate.
+
+## b.
+
+```{r}
+#| label: temp-elong-correlation-plot
+
+# base layer: ggplot, data from kelp data frame
+ggplot(data = kelp,
+       mapping = aes(
+         x = temp_c, # x-axis: temperature
+         y = kelp_elong, # y-axis: elongation rate
+         color = temp_c)) + # color gradient by temperature
+  # first layer: scatter plot
+  geom_point() +
+  # labeling axes and adding title
+  labs(x = expression(Temperature~(degree*C)),
+       y = expression("Giant kelp elongation rate (cm day"^-1~")"),
+       title = "As temperature increases, elongation rate decreases") +
+  # changing theme
+  theme_bw() +
+  # removing legend
+  theme(legend.position = "none")
+```
+
