@@ -1,0 +1,25 @@
+---
+title: "Homework 3"
+date: "2026-05-25"
+author: "Luke Simon"
+format: pdf:
+  toc: true
+execute:
+  message: false
+  warning: false
+---
+
+```{r}
+#| label: setup
+
+# read in packages
+library(tidyverse)
+library(here)
+library(janitor)
+library(readxl)
+
+# read in data and create new object
+kelp <- read_csv(
+  here("data", "temp-kelp.csv"))
+```
+
