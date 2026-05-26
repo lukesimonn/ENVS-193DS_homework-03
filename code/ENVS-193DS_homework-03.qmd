@@ -23,3 +23,9 @@ kelp <- read_csv(
   here("data", "temp-kelp.csv"))
 ```
 
+
+# Problem 1. Giant kelp fronds
+
+## a.
+
+There are two appropriate tests for testing the strength of the relationship between temperature and giant kelp frond elongation rate (correlation). These two are the Pearson's correlation, which assumes normally distributed continuous data, and Spearman's rank correlation, which does not require normality but does require continuous data. Pearsons'scorrelation is the correct test to choose when there are no outliers in the data and the distribution is clearly normal, in all other cases Spearman's is more appropriate.
