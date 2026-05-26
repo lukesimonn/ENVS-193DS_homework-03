@@ -17,6 +17,7 @@ library(tidyverse)
 library(here)
 library(janitor)
 library(readxl)
+library(patchwork)  
 
 # read in data and create new object
 kelp <- read_csv(
@@ -53,3 +54,58 @@ ggplot(data = kelp,
   theme(legend.position = "none")
 ```
 
+## c.
+
+### Assumption check
+
+**Relationship appears linear, likely meaning Pearson's is the accurate test to run. Going to check normality of each variable, as each is continuous, to confirm that Pearson's is the correct test.**
+
+```{r}
+#| label: QQ-plots
+
+# creating object for temperature QQ plot
+tempQQ <-
+# baselayer: ggplot
+ggplot(data = kelp, # using kelp data frame
+       aes(sample = temp_c)) + # y-axis for QQ plot
+  # first layer: QQ reference line
+  geom_qq_line(color = "cornflowerblue") + # displaying line in blue
+  # second layer: QQ plot 
+  geom_qq() +
+  # labeling title
+  labs(title = "Temperature QQ")+
+  # changing theme
+  theme_bw() 
+
+# creating obhect for elongation QQ plot
+elongQQ <-
+# baselayer: ggplot
+ggplot(data = kelp, # using kelp data frame
+       aes(sample = kelp_elong)) + # y-axis for QQ plot
+  # first layer: QQ reference line
+  geom_qq_line(color = "red") + # displaying line in red
+  # second layer: QQ plot 
+  geom_qq() +
+  # labeling title 
+  labs(title = "Kelp elongation QQ") +
+  # changing theme
+  theme_bw()
+
+# using patchwork package to display plots side-by-side
+tempQQ | elongQQ
+```
+
+To figure out which test was accurate to run in this scenario I first checked the linearity of the initial plot, there appears to be a negative linear relationship between temperature and giant kelp elongation rate. Then, to check the normality (I am assuming this data is independent here and we have established that they both are continuous) I created QQ plots of each variable. The QQ plots suggest both variables (and therefore all the data) are normally distributed (centering around the reference line with only slight deviations at the tails) and therefore suggests that a Pearson's correlation test is the appropriate test to perform.
+
+### Running the test
+
+```{r}
+
+# running correlation test
+cor.test(kelp$temp_c, kelp$kelp_elong,
+         method = "pearson") # pearson's test
+```
+
+## d.
+
+To evaluate the strength of the relationship between temperature and giant kelp frond elongation rate, I uses a Pearson's correlation test. I found a strong negative relationship between temperature and elongation rate (Pearson's r = -0.69, t(30) = -5.2, p < 0.001, $\alpha$ =0.05)
