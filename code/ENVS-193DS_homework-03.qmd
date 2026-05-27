@@ -281,6 +281,8 @@ For my affective data visualization I want to create a network map of all of my 
 
 - This draft only includes the first 12 observations
 
+![](images/affectivedraft.png)
+
 ## d.
 
 This is piece is a network display of my daily walk time to my 8 am class, heavily influenced by the creation of real network maps I have made for my job and shape and color work of Posavec and Lupi. This was created on the free and open source network mapping platform draw.io. Paths are created to represent which of the two buildings I was going to (in chronological order), colors follow rainbow order (red-purple) for walk time (red = 12, purple = 21) and the number of sides of each shape represents how many minutes after 7:50 I arrived, horizontal location is by daily temperature, while vertical is by wake-up time.
@@ -295,6 +297,16 @@ This is piece is a network display of my daily walk time to my 8 am class, heavi
 
 The author is trying to answer the question of whether or not competition between herbaceous and woody plants depends on the availability of anabolic nutrients relative to catabolic nutrients. To do so, the selected test was the Kruskal-Wallis test where the response variable is either tree height or tree abundance and the predictor is treatment type. They are doing this so that they can analyze if there is a difference in tree height/abundance across treatment type.
 
-
+![](images/plot.png)
 
 ## b.
+
+This plot is fairly visually clear and concise. The axes both make sense, though perhaps under the x-axis they could label with "Treatment" but this is fairly clear in context of the paper. Median values for each treatment type are clearly visibile and easy to relate to the y-axis.
+
+## c.
+
+I think that the authors handle visual clutter very well. This is going to be a cramped figure no matter what due to the sheer number of treatment types. I think the line widths for each element are thoughtfully chosen to make them distinct yet not too close together. The figure can appear to be a lot at first but it is quite clear once some time is spent with it. The data:ink ratio isn't great, but there is not much that can be done to fix this due to the large spread of the treatments.
+
+## d.
+
+The change I would make would be to replace the SP and AS with their full name SP -> superphosphate and AS -> ammonium sulphate. I also think including treatment on the x-axis would be very helpful for making the figure stand alone. To help with clutter caused by expanding the names I think you could do away with the repeat of the treatment types for the second plot and utilize one concise x-axis. If the authors wanted to split this into two figures they could also include the underlying data, but I think this would be too crowded in its current side-by-side configuration.
