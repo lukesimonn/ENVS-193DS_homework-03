@@ -278,4 +278,6 @@ For my affective data visualization I want to create a network map of all of my 
 ## b.
 
 # c.
+
 - This draft only includes the first 12 observations
+
