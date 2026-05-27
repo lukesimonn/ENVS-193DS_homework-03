@@ -269,3 +269,12 @@ b.
 
 **Figure 2. Negative relationship between departure time and walk time.** Points represent individual daily walk times to two different locations, Building 387 (n = 11) and Campbell Hall (n = 15), on UCSB's campus from Isla Vista. Point shape represents if a stop was taken on the walk (triangle = TRUE, circle = FALSE), while point color represents location (387: orange, Campbell: aquamarine). Line represents linear model of departure time vs walk time. Ribbon represents 95% confidence interval from predictions. Data collected by Luke Simon between the dates of 2026-04-20 and 2026-05-26.
 
+# Problem 3. 
+
+## a.
+
+For my affective data visualization I want to create a network map of all of my data as nodes. These nodes  would vary in shape and color which would each correspond to some detail from the data set. My current thought process, though this will likely change, is that color would operate on a gradient for walk time and node shape would correspond to arrival time (number of sides = minutes after 7:50). I would also include some signifier for if I took a stop and connect each node by location. Node location relative to each other is based on temperature (x-axis) and wake up time (y-axis) and node border color signifies location.
+
+## b.
+
+- This draft only includes the first 12 observations
