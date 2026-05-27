@@ -61,10 +61,9 @@ There are two appropriate tests for testing the strength of the relationship bet
 ggplot(data = kelp,
        mapping = aes(
          x = temp_c, # x-axis: temperature
-         y = kelp_elong, # y-axis: elongation rate
-         color = temp_c)) + # color gradient by temperature
+         y = kelp_elong)) + # y-axis: elongation rate
   # first layer: scatter plot
-  geom_point() +
+  geom_point(color = "tan") + # changing point color
   # labeling axes and adding title
   labs(x = expression(Temperature~(degree*C)),
        y = expression("Giant kelp elongation rate (cm day"^-1~")"),
@@ -275,6 +274,8 @@ b.
 
 For my affective data visualization I want to create a network map of all of my data as nodes. These nodes  would vary in shape and color which would each correspond to some detail from the data set. My current thought process, though this will likely change, is that color would operate on a gradient for walk time and node shape would correspond to arrival time (number of sides = minutes after 7:50). I would also include some signifier for if I took a stop and connect each node by location. Node location relative to each other is based on temperature (x-axis) and wake up time (y-axis) and node border color signifies location.
 
+**NOTE: I chose arrival time due to spread being lower than departure time (less shapes needed), departure time is easily calculated with color and shape**
+
 ## b.
 
 ![](images/sketch.jpg)
@@ -287,11 +288,11 @@ For my affective data visualization I want to create a network map of all of my 
 
 ## d.
 
-This is piece is a network display of my daily walk time to my 8 am class, heavily influenced by the creation of real network maps I have made for my job and shape and color work of Posavec and Lupi. This was created on the free and open source network mapping platform draw.io. Paths are created to represent which of the two buildings I was going to (in chronological order), colors follow rainbow order (red-purple) for walk time (red = 12, purple = 21) and the number of sides of each shape represents how many minutes after 7:50 I arrived, horizontal location is by daily temperature, while vertical is by wake-up time.
+This piece is a network map displaying my daily walk time to my 8 am class, heavily influenced by the creation of real network maps I have encountered and the shape and color work of Posavec and Lupi. This was created on the free and open source network mapping platform draw.io. Paths are created to represent which of the two buildings I was going to (in chronological order), colors follow rainbow order (red-purple) for walk time (red = 12, purple = 21) and the number of sides of each shape represents how many minutes after 7:50 I arrived, horizontal location is by daily temperature, while vertical is by wake-up time.
 
 ## e.
 
-[Slideshow link]()
+[Slideshow link](https://docs.google.com/presentation/d/10PTqVswPO0zJS4wEpbgHM269NQ7UjAgUEE3OfZESkVc/edit?slide=id.g3eb33348aa7_0_21#slide=id.g3eb33348aa7_0_21)
 
 # Problem 4. Statistical critique
 
