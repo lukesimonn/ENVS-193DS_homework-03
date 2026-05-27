@@ -269,7 +269,7 @@ b.
 
 **Figure 2. Negative relationship between departure time and walk time.** Points represent individual daily walk times to two different locations, Building 387 (n = 11) and Campbell Hall (n = 15), on UCSB's campus from Isla Vista. Point shape represents if a stop was taken on the walk (triangle = TRUE, circle = FALSE), while point color represents location (387: orange, Campbell: aquamarine). Line represents linear model of departure time vs walk time. Ribbon represents 95% confidence interval from predictions. Data collected by Luke Simon between the dates of 2026-04-20 and 2026-05-26.
 
-# Problem 3. 
+# Problem 3. Affective visualization
 
 ## a.
 
@@ -277,8 +277,24 @@ For my affective data visualization I want to create a network map of all of my 
 
 ## b.
 
-# c.
+## c.
 
 - This draft only includes the first 12 observations
 
+## d.
 
+This is piece is a network display of my daily walk time to my 8 am class, heavily influenced by the creation of real network maps I have made for my job and shape and color work of Posavec and Lupi. This was created on the free and open source network mapping platform draw.io. Paths are created to represent which of the two buildings I was going to (in chronological order), colors follow rainbow order (red-purple) for walk time (red = 12, purple = 21) and the number of sides of each shape represents how many minutes after 7:50 I arrived, horizontal location is by daily temperature, while vertical is by wake-up time.
+
+## e.
+
+[Slideshow link]()
+
+# Problem 4. Statistical critique
+
+## a. 
+
+The author is trying to answer the question of whether or not competition between herbaceous and woody plants depends on the availability of anabolic nutrients relative to catabolic nutrients. To do so, the selected test was the Kruskal-Wallis test where the response variable is either tree height or tree abundance and the predictor is treatment type. They are doing this so that they can analyze if there is a difference in tree height/abundance across treatment type.
+
+
+
+## b.
