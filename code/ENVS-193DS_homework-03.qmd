@@ -40,9 +40,6 @@ personal_num <- personal_data |>
   mutate(departure_time = as.numeric(departure_time)) |> 
   # selecting needed columns for model
   select(departure_time, walk_minutes)
-
-
-
 ```
 
 
@@ -50,7 +47,7 @@ personal_num <- personal_data |>
 
 ## a.
 
-There are two appropriate tests for testing the strength of the relationship between temperature and giant kelp frond elongation rate (correlation). These two are the Pearson's correlation, which assumes normally distributed continuous data, and Spearman's rank correlation, which does not require normality but does require continuous data. Pearsons'scorrelation is the correct test to choose when there are no outliers in the data and the distribution is clearly normal, in all other cases Spearman's is more appropriate.
+There are two appropriate tests for testing the strength of the relationship between temperature and giant kelp frond elongation rate (correlation). These two are the Pearson's correlation, which assumes normally distributed continuous data, and Spearman's rank correlation, which does not require normality but does require continuous data and a monotonic distribution. Pearsons's correlation is the correct test to choose when there are no outliers in the data and the distribution is clearly normal, in all other cases Spearman's is more appropriate.
 
 ## b.
 
@@ -128,7 +125,7 @@ cor.test(kelp$temp_c, kelp$kelp_elong,
 
 ## d.
 
-To evaluate the strength of the relationship between temperature and giant kelp frond elongation rate, I used a Pearson's correlation test. I found a strong negative relationship between temperature and elongation rate (Pearson's r = -0.69, t(30) = -5.2, p < 0.001, $\alpha$ = 0.05)
+To evaluate the strength of the relationship between temperature and giant kelp frond elongation rate, I used a Pearson's correlation test. I found a strong negative relationship between temperature and elongation rate (Pearson's r = -0.69, t(30) = -5.2, p < 0.001, $\alpha$ = 0.05). 
 
 ## e.
 
@@ -272,7 +269,7 @@ b.
 
 ## a.
 
-For my affective data visualization I want to create a network map of all of my data as nodes. These nodes  would vary in shape and color which would each correspond to some detail from the data set. My current thought process, though this will likely change, is that color would operate on a gradient for walk time and node shape would correspond to arrival time (number of sides = minutes after 7:50). I would also include some signifier for if I took a stop and connect each node by location. Node location relative to each other is based on temperature (x-axis) and wake up time (y-axis) and node border color signifies location.
+For my affective data visualization I want to create a network map of all of my data as nodes. These nodes would vary in shape and color which would each correspond to some detail from the data set. My current thought process, though this will likely change, is that color would operate on a gradient for walk time and node shape would correspond to arrival time (number of sides = minutes after 7:50). I would also include some signifier for if I took a stop and connect each node by location. With the path of nodes representing chronlogical progression. Node location relative to each other is based on temperature (x-axis) and wake up time (y-axis) and node border color signifies location.
 
 **NOTE: I chose arrival time due to spread being lower than departure time (less shapes needed), departure time is easily calculated with color and shape**
 
